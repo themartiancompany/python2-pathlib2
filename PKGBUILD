@@ -1,4 +1,8 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
 # Maintainer: Danilo J. S. Bellini <danilo dot bellini at gmail dot com>
+# Maintainer:  Pellegrino Prevete <cGVsbGVncmlub3ByZXZldGVAZ21haWwuY29tCg== | base -d>
+# Maintainer:  Truocolo <truocolo@aol.com>
 # Contributor: Felix Yan <felixonmars@archlinux.org>
 
 pkgname=python2-pathlib2
@@ -29,7 +33,18 @@ build() {
 }
 
 package() {
-  cd "$srcdir/$_name-$pkgver"
-  python2 setup.py install --root="$pkgdir" --optimize=1 --skip-build
-  install -Dm644 LICENSE.rst "$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
+  cd \
+    "$srcdir/$_name-$pkgver"
+  python2 \
+    setup.py \
+      install \
+        --root="${pkgdir}" \
+        --optimize=1 \
+        --skip-build
+  install \
+    -Dm644 \
+    LICENSE.rst \
+    "$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
 }
+
+# vim:set sw=2 sts=-1 et:
