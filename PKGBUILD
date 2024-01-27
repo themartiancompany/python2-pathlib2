@@ -1,5 +1,6 @@
 # Maintainer: Danilo J. S. Bellini <danilo dot bellini at gmail dot com>
 # Contributor: Felix Yan <felixonmars@archlinux.org>
+
 pkgname=python2-pathlib2
 _name=${pkgname#python2-}
 pkgver=2.3.7.post1
